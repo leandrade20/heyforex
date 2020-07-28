@@ -1,0 +1,165 @@
+.page-black{
+    background-color: $color__black;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+
+    *{
+        color: $color__grey;
+    }
+    h1 {
+        color: white;
+        max-width: 18rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .gform_body {
+        ul.gform_fields {
+          input[type="text"],
+          input[type="email"],
+          input[type="url"],
+          input[type="tel"],
+          textarea {
+            width: 100%;
+            border: 2px solid $color__grey;
+            background-color: transparent;
+            outline: transparent;
+            color: white;
+            padding: 0.35rem 0.7rem;
+            border-radius: 0.2rem;
+            font-size: 0.8rem;
+            &:active, &:focus{
+                border: 2px solid $color__green; 
+            }
+          }
+        }
+
+      }
+      
+      ::placeholder{
+        color: $color__grey;
+      }
+
+      button, input[type="button"], input[type="reset"], input[type="submit"] {
+        color: #2D2D2D;
+        background: white;
+        border: 2px solid white;
+        &:hover{
+                color: white;
+                background: #2D2D2D;
+        }
+        margin: 0 0 0 auto;
+        display: table;
+    }
+    .column-section.margin-med{
+        .row{
+            padding: 4rem 2rem;
+            border: 1px solid $color__grey;
+            border-radius: 0.2rem;
+        }
+    }
+    .column-section{
+        .row{
+            -ms-flex-align: center !important;
+            align-items: center !important;
+            // padding: 4rem 2rem;
+            img{
+                width: 90%;
+            }
+        }
+    }
+
+    .btn-cta.white {
+        color: #2D2D2D;
+        background: white;
+        border: 2px solid white;
+        margin-top: 1.5rem;
+        &:hover{
+                color: white;
+                background: #2D2D2D;
+        }
+    }
+
+
+
+    .container {
+        width: 90%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+          margin-left: auto; 
+      }
+        @media (max-width: 576px) {
+          .container {
+                  max-width: 95%; } }
+          @media (min-width: 576px) {
+              .container {
+                  max-width: 90%; } }
+        @media (min-width: 768px) {
+          .container {
+            max-width: 90%; } }
+        @media (min-width: 992px) {
+          .container {
+            max-width: 80%; } }
+            @media (min-width: 1200px) {
+                .container {
+                        max-width: 70%; } }
+               @media (min-width: 1800px) {
+                  .container {
+              max-width: 60%; } }
+}
+
+.error404{
+    .btn-cta.white {
+        display: table;
+        margin: 0 auto;
+    }
+.banner_abso{
+    animation: spin 80s linear infinite;
+    width: 26rem;
+    position: absolute;
+    display: none;
+}
+    .banner_left{
+        bottom: -9rem;
+        left: 0rem;
+    }
+
+    .banner_right{
+        top: -5rem;
+        right: 0rem;
+    }
+    .page-black {
+position: relative;
+overflow: hidden;
+    }
+
+    
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .error404 .banner_left {
+        bottom: -9rem;
+        left: -9rem;
+    }
+    .error404 .banner_right {
+        top: -6rem;
+        right: -9rem;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .error404 .banner_abso{
+    width: 20rem;
+}
+}

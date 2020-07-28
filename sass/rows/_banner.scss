@@ -1,0 +1,114 @@
+.banner.margin-top{
+
+}
+
+.banner-wrap{
+    position: relative;
+    margin-top: 8rem;
+    margin-bottom: 7rem;
+//   margin-top: 80px;
+  .border-out {
+	width: 100%;
+	min-height: 15rem;
+    transform: skew(-3deg) rotate(-3deg);
+    background: linear-gradient(-45deg, #23CE53, #2D2D2D);
+	background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    position: absolute;
+    height: 100%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    .border-inner{
+        position: absolute;
+        width: calc(100% - 50px);
+        height: calc(100% - 50px);
+        transform: skew(0deg) rotate(0deg) translate(25px, 25px);
+        background: white;
+        content: '';
+        z-index: 1;
+        }
+
+        .content{
+            position: relative;
+            z-index: 2;
+            padding: 5rem 3rem;
+            text-align: center;
+            max-width: 37rem;
+            width: 100%;
+            margin: 0 auto;
+            .primary{
+                margin-top: 1.5rem;
+            }
+        }
+
+        .banner_right{
+            position: absolute;
+            bottom: -1.5rem;
+            right: -2.5rem;
+            z-index: 0;
+            min-width: 8rem;
+        }
+        .banner_left{
+            position: absolute;
+    top: -2rem;
+    left: -2.5rem;
+    z-index: 3;
+    min-width: 8rem;
+        }
+
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 650px;
+            margin: 2rem auto 0;
+            .gform_body{
+                width: calc(100% - 223px);
+                padding-right: 0.7rem;
+
+                input{
+                    padding: 0.35rem 0.7rem;
+                    border-radius: 0.2rem;
+                    font-size: 0.8rem;
+                }
+            }
+            .gform_button button{
+                width: 222px;
+            }
+        }
+}
+
+@media (max-width: 991px){
+.banner-wrap{
+    .banner_left {
+    z-index: 0;
+}
+}
+}
+
+@media (max-width: 657px){
+    .banner-wrap{
+h2 {
+    font-size: 1.4rem;
+    line-height: 130%;
+}
+    }
+    .banner-wrap .border-inner {
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        transform: skew(0deg) rotate(0deg) translate(15px, 15px);
+    }
+}
+
+

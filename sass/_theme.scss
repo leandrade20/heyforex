@@ -1,0 +1,379 @@
+/** 
+* Add theme general styles here
+*/
+html{
+	overflow-x: hidden;
+    width: 100%;
+}
+
+
+body{
+	font-family: 'Manrope', sans-serif;
+	color: $color__black;
+	overflow-x: hidden;
+    width: 100%;
+}
+#page {
+	margin-top: 0px;
+}
+
+.green{
+	color: $color__green;
+}
+.container {
+	width: 90%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	  margin-left: auto; 
+  }
+	@media (max-width: 576px) {
+	  .container {
+			  max-width: 95%; } }
+	  @media (min-width: 576px) {
+		  .container {
+			  max-width: 90%; } }
+	@media (min-width: 768px) {
+	  .container {
+		max-width: 90%; } }
+	@media (min-width: 992px) {
+	  .container {
+		max-width: 90%; } }
+		@media (min-width: 1200px) {
+			.container {
+					max-width: 90%; } }
+		   @media (min-width: 1800px) {
+			  .container {
+		  max-width: 85%; } }
+
+
+@keyframes LOADING {
+	0% {
+		opacity: .6;
+	}
+	50% {
+		opacity: .8;
+	}
+	100% {
+		opacity: .6;
+	}
+}
+
+.loading {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: white;
+		transition: all .2s linear;
+		opacity: 1;
+		animation: LOADING .8s infinite;
+		z-index: 100;
+	}
+}
+
+.dataTables_wrapper{
+	*{
+		background-color: transparent !important;
+	}
+	th,td {
+			padding: 0.6rem 0.4rem !important;
+	}
+}
+
+.column-section{
+	img{
+		width: 100%;
+	}
+	p.no-margin{
+		margin-bottom: 0 !important;
+	}
+	p{
+		color: #4D4D4D;
+	}
+}
+
+#cookie-notice{
+	background-color: transparent !important;
+    width: 15rem;
+    min-width: unset;
+    box-shadow: $shadow;
+    left: 1.3rem;
+	bottom: 1.3rem;
+	// position: relative;
+
+	
+	.cookie-notice-container{
+		padding: 1.4rem 1.1rem;
+		background-color: transparent !important;
+		position: relative;
+		span{
+			position: relative;
+			z-index: 1;
+			text-align: left;
+			&#cn-notice-buttons{
+				margin: 0.5rem 0 0 !important;
+				display: table;
+				a{
+					margin:0;
+				}
+			}
+		}
+		&:after{
+			content:'';
+			background-color: rgba(255,255,255,1);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top:0;
+			z-index: 0;
+			transform: skew(-4.5deg) rotate(-4.5deg);
+		}
+		#cn-close-notice{
+			color: black;
+			position: absolute;
+			z-index: 2;
+			top: 0.8rem;
+
+		}
+	}
+	.cn-close-icon:after, .cn-close-icon:before {
+		background-color: #060606 !important;
+	}
+
+	#cn-accept-cookie{
+		border-radius: 0;
+		background-color: $color__green;
+		border: 1px solid $color__green;
+		&:hover{
+			color: $color__green;
+			background-color: transparent;
+		}
+	}
+	#cn-notice-text{
+		font-size: 0.8rem;
+		line-height: 153% !important;
+		a{
+			color: $color__green;
+		}
+	}
+}
+
+// used to lock scroll when mobile menu is open
+body.mobile-menu-open {
+	@include change(992px) {
+		overflow: hidden;
+	}
+}
+
+/** 
+* To assist Bootstrap flex utilities "Flex Grow Property"
+* Add to the flex children elements
+*/
+.grow {
+  &--1 {
+    flex-grow: 1;
+  }
+  &--2 {
+    flex-grow: 2;
+  }
+  &--3 {
+    flex-grow: 3;
+  }
+  &--4 {
+    flex-grow: 4;
+  }
+}
+
+
+// padding classes
+.padding-none {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.padding-min {
+	padding-top: 25px;
+  padding-bottom: 25px;
+  
+  @include change(768px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.padding-med {
+	padding-top: 80px;
+  padding-bottom: 80px;
+  @include change(992px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include change(768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.padding-max {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+  @include change(992px) {
+    padding-top: 5rem;
+	padding-bottom: 5rem;
+  }
+  @include change(768px) {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+.margin-none {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.margin-min {
+	margin-top: 25px;
+  margin-bottom: 25px;
+  
+  @include change(768px) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.margin-med {
+	margin-top: 80px;
+  margin-bottom: 80px;
+  @include change(992px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  @include change(768px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.margin-max {
+	margin-top: 6rem;
+  margin-bottom: 6rem;
+  @include change(992px) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  @include change(768px) {
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
+
+
+
+.bg-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+}
+
+.pos-rel {
+	position: relative;
+}
+
+.single-blog {
+	.info {
+		padding-bottom: 15px;
+
+		.cats a {
+			font-size: responsive 16px 20px;
+			color: grey;
+			transition: all .2s ease;
+			margin-right: 15px;
+			font-weight: 500;
+
+			&:hover {
+				text-decoration: none;
+				color: darken(grey, 10%);
+			}
+		}
+
+		.date {
+			font-size: responsive 16px 20px;
+			font-weight: 500;
+		}
+	}
+
+	.tags {
+		font-size: responsive 16px 18px;
+		a {
+			color: grey;
+			margin-right: 5px;
+			transition: all .2s ease;
+
+			&:hover {
+				color: grey;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.post-nav {
+		a {
+			display: block;
+			width: 100%;
+			padding: 15px;
+			border: 1px solid black;
+			margin: 15px;
+			color: grey;
+			transition: all .2s ease;
+
+			.title {
+				font-size: responsive 16px 18px;
+				font-weight: 500;
+			}
+			
+			.direction {
+				text-transform: uppercase;
+				font-weight: 800;
+				font-size: responsive 16px 18px;
+				margin-bottom: 15px;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: grey;
+				border-color: grey;
+			}
+		}
+	}
+}
+
+.post-author-box {
+	.photo {
+		height: 165px;
+		width: 165px;
+		min-width: 165px;
+		background-size: cover;
+		background-position: center center;
+	}
+}

@@ -1,0 +1,205 @@
+/* MOBILE style */
+@media screen and (max-width: 992px) {
+    /*
+     * In Mobile, hide the tabs controls and undo some potential damage done by the accordion
+     */
+    .responsive-tabs .nav-tabs,
+    .responsive-tabs .tab-content .collapse.active:not(.in) {
+        display: none;
+        height: auto !important;
+    }
+    .responsive-tabs .tab-content .collapse.in,
+    .responsive-tabs .tab-content .collapsing {
+        display: block;
+        height: auto !important;
+    }
+}
+
+.product_tab{
+    .container{
+        // max-width: 100%;
+        // width: 100%;
+    }
+}
+
+.tab-content{
+    padding: 2rem 1.5rem;
+    > .active {
+        display: block;
+        height: auto !important;
+    }
+    img{
+        width: 85%;
+    }
+} 
+
+.responsive-tabs{
+    width: 100%;
+    box-shadow: $shadow;
+    border-radius: 0.5rem;
+    > ul{
+        border: 0;
+        justify-content: space-between;
+        flex-wrap: unset;
+        // margin: 2rem 0;
+        li{
+            opacity: 0.6;
+            transition: all .3s ease;
+            margin-right: 0rem;
+            font-weight: 600;
+            padding: 0.6rem 1.5rem 1rem 1rem;
+            border-top: 0.4rem solid transparent;
+            background-color: rgba(232, 234, 232, 0.8);
+            transition: all .2s ease;
+            width: 100%;
+            &:last-of-type{
+                margin-left: 0;
+            }
+            a{
+                text-decoration: none;
+                color: black !important;
+                display: flex;
+                /* align-content: center; */
+                align-items: center;
+                img{
+                    margin-right: 0.5rem;
+                }
+            }
+            &.active,&:hover{
+                opacity: 1;
+                border-top: 0.4rem solid $color__green;
+                background-color: transparent;
+            }
+        }
+    }
+    .table{
+        margin-top: 3.5rem;
+        table{
+        th,td{
+            border-top: 0px solid #dee2e6;
+        }
+        th:first-of-type{
+            font-weight: 400;
+        }
+        th:last-of-type{
+            text-align: right;
+        }
+        tr:nth-of-type(odd){
+            background-color: #dee2e6;
+        }                  
+        }
+    }
+}
+
+/* DESKTOP style */
+@media screen and (min-width: 991px) {
+    /*
+     * In desktop, hide the accordion's controls and undo some potential damage done on the active tab
+     */
+
+
+    .responsive-tabs .panel-heading {
+        display: none;
+    }
+    .responsive-tabs > .active {
+        height: auto !important;
+    }
+
+
+}
+
+@media screen and (max-width: 991px) {
+    .responsive-tabs{
+        width: 100%;
+     }
+    .panel-heading{
+        // border: 2px solid #dee2e6;
+        // padding: 1rem 1rem 1rem 1rem !important;
+        // border-radius: 3rem;
+        // margin-top: 2rem;
+        // margin-bottom: 1rem;
+        // position: relative;
+        a{
+               /* padding-right: 2rem; */
+    border-top: 0.4rem solid #0DD776;
+    color: black;
+    font-weight: 700;
+    margin: 0.7rem 0;
+    display: table;
+            i{
+                transition: all .3s ease;
+                transform: rotate(0deg);
+                top: 1.4rem;
+                right: 2.5rem;
+                position: absolute;
+            }
+    
+            &.clicked{
+                i{
+                transform: rotate(180deg);
+                }
+            &.collapsed{
+                i{
+                    transform: rotate(0deg);  
+                }
+            }
+            }
+
+            &.closed{
+                i{
+                transform: rotate(0deg);
+                }
+            &.opened{
+                i{
+                    transform: rotate(180deg);  
+                }
+            }
+            }
+
+            
+        }
+
+    img {
+        margin-right: 1rem;
+    }
+}
+
+.tab-pane{
+    .row{
+        > div{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+.tab-content img {
+    width: 80%;
+    display: table;
+    margin: 0 auto;
+}
+
+.tab-content .panel-heading {
+    padding: 0;
+    margin-bottom: 2rem;
+}
+#tabs-content {
+    padding: 2rem 1.5rem 0;
+}
+}
+
+
+
+
+.tab-content .panel-heading {
+    padding: 0;
+}
+
+.tab-content a {
+    // display: block;
+    // color: black !important;
+    // text-decoration: none !important;
+}
+
+
+.single main .responsive-tabs p:last-of-type {
+    margin-bottom: 0rem !important;
+}

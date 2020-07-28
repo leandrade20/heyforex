@@ -1,0 +1,145 @@
+#colophon {
+  background: #F8FBF9;
+  padding: 10px 0;
+
+  .footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  ul{
+    padding-left: 0;
+    list-style: none;
+    li{
+      margin-bottom: 0.5rem;
+      a{
+        font-size: 0.9rem;
+        color: #8D8D8D;
+        text-decoration: none !important;
+        transition: all .3s ease;
+        &:hover{
+          color: $color__green;
+        }
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .logo {
+      animation: move 5s linear infinite;
+      position: absolute;
+      transform: translate(0,0);
+      img{
+        min-width: 4rem;
+        height: auto;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0,0);
+    }
+    22%{
+      transform: translate(1.3rem,0.35rem);
+    }
+    28%{
+      transform: translate(1.7rem,0.35rem);
+    }
+
+    50% {
+      transform: translate(3.5rem,0);
+    }
+    72%{
+      transform: translate(1.7rem,0.35rem);
+    }
+    78%{
+      transform: translate(1.3rem,0.35rem);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
+}
+
+.footer-below{
+  border-top: 1px solid #dce0df;
+    .row{
+      > div{
+        padding: 1.5rem 0;
+      }
+      > div:nth-of-type(2){
+        border-left: 1px solid #dce0df;
+      }
+    }
+  .copy{
+    font-size: 0.7rem;
+    color: $color__black;
+    text-decoration: none !important;
+  }
+  ul{
+    padding-left: 0;
+    list-style: none;
+    font-size: 0.7rem;
+    margin: 0;
+    li{
+      margin-bottom: 0rem;
+      margin-left: 1.3rem;
+      a{
+        font-size: 0.7rem;
+        color: $color__black;
+        text-decoration: none !important;
+        transition: all .3s ease;
+        &:hover{
+          color: $color__green;
+        }
+      }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.heyfx-social-function{
+  a{
+    width: 1em;
+  height: 1em;
+  color: $color__black;
+  margin: 0 0.4rem;
+  transition: all .3s ease;
+  &:hover{
+    color: $color__green;
+  }
+  }
+}
+
+@media (max-width: 991px){
+  .heyfx-social-function{
+    justify-content: start !important;
+    a{
+      width: 1.5rem;
+      height: 1.5rem;
+      ion-icon{
+        font-size: 1.5rem;
+      }
+    }
+  }
+footer{
+  .col-lg-3{
+    height: 15rem;
+  }
+}
+#colophon .logo {
+  left: 38%;
+}
+}
+
+
+@media (max-width: 568px){
+#colophon .logo {
+    left: 25%;
+}
+}

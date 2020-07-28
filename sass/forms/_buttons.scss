@@ -1,0 +1,29 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	font-size: 1rem;
+	display: inline-block;
+	padding: 0.3rem 0.8rem;
+	font-weight: bold;
+  color: white;
+  background: $color__black;
+	text-align: center;
+	border: 2px solid $color__black;
+	transition: all .3s ease;
+	line-height: 130%;
+
+	&:hover {
+		text-decoration: none;
+		background: white;
+		color: $color__black;
+		cursor: pointer;
+	}
+
+
+	&:active,
+	&:focus {
+		// border-color: $color__border-button-focus;
+		outline: none;
+	}
+}

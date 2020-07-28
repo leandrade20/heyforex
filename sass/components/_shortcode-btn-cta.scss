@@ -1,0 +1,29 @@
+.btn-cta {
+	font-size: 1rem;
+	display: inline-block;
+	padding: 0.3rem 0.8rem;
+	font-weight: bold;
+  color: white;
+  background: $color__black;
+	text-align: center;
+	border: 2px solid $color__black;
+	transition: all .3s ease;
+	line-height: 130%;
+
+	&:hover {
+		text-decoration: none;
+		background: white;
+		color: $color__black;
+	}
+
+	&.green{
+		padding: 0;
+		background-color: transparent;
+		margin-top: 1.1rem;
+		border: 0px solid transparent;
+		&:hover{
+			color: $color__green;
+			text-decoration: underline;
+		}
+	}
+}

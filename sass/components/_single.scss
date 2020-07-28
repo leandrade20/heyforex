@@ -1,0 +1,47 @@
+.single{
+    main{
+        p:last-of-type{
+            margin-bottom: 1.5rem !important;
+        }
+    }
+    .heateor_sss_sharing_container{
+        margin-top: 3rem;
+        li{
+            margin-right: 0.6rem !important;
+        }
+        &:last-of-type{
+            margin-right: 0rem;
+        }
+    }
+    a.post-arrow{
+        color: $color__black;
+        text-decoration: none;
+        transition: all .3s ease;
+        &:hover{
+            color: $color__green;
+        }
+    }
+
+    .banner{
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 650px;
+            margin: 2rem auto 0;
+            .gform_body{
+                width: calc(100% - 223px);
+                padding-right: 0.7rem;
+
+                input{
+                    padding: 0.35rem 0.7rem;
+                    border-radius: 0.2rem;
+                    font-size: 0.8rem;
+                }
+            }
+            .gform_button button{
+                width: 222px;
+            }
+        }
+    }
+}
